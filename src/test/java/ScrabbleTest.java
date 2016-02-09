@@ -17,4 +17,39 @@ public class ScrabbleTest {
     assertEquals(score, testScrabble.scrabbleScore("dog"));
   }
 
+  @Test
+  public void scrabbleScore_Adds3PointsIfCharIsBCMP() {
+    Scrabble testScrabble = new Scrabble();
+    Integer score = 10;
+    assertEquals(score, testScrabble.scrabbleScore("bump"));
+  }
+
+  @Test
+  public void scrabbleScore_Adds4PointsIfCharIsFHVWY() {
+    Scrabble testScrabble = new Scrabble();
+    Integer score = 9;
+    assertEquals(score, testScrabble.scrabbleScore("hay"));
+  }
+
+  @Test
+  public void scrabbleScore_Adds5PointsIfCharIsK() {
+    Scrabble testScrabble = new Scrabble();
+    Integer score = 10;
+    assertEquals(score, testScrabble.scrabbleScore("key"));
+  }
+
+  @Test
+  public void scrabbleScore_Adds8PointsIfCharIsJX() {
+    Scrabble testScrabble = new Scrabble();
+    Integer score = 17;
+    assertEquals(score, testScrabble.scrabbleScore("jax"));
+  }
+
+  @Test
+  public void scrabbleScore_Adds10PointsIfCharIsQZ() {
+    Scrabble testScrabble = new Scrabble();
+    Integer score = 23;
+    assertEquals(score, testScrabble.scrabbleScore("quazi"));
+  }
+
 }
