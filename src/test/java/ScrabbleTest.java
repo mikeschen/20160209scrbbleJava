@@ -10,4 +10,11 @@ public class ScrabbleTest {
     assertEquals(score, testScrabble.scrabbleScore("rule"));
   }
 
+  @Test
+  public void scrabbleScore_Adds2PointsIfCharIsDOrG() {
+    Scrabble testScrabble = new Scrabble();
+    Integer score = 5;
+    assertEquals(score, testScrabble.scrabbleScore("dog"));
+  }
+
 }

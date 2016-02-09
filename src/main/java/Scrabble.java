@@ -13,7 +13,11 @@ public class Scrabble {
     char[] scrabbleArray = userString.toCharArray();
     Integer wordScore = 0;
     for(int i = 0; i < scrabbleArray.length; i++) {
-      wordScore += 1;
+      if((scrabbleArray[i] == 'd') || (scrabbleArray[i] == 'g')) {
+        wordScore += 2;
+      } else {
+        wordScore += 1;
+      }
     }
     return wordScore;
   }
